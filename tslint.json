@@ -1,0 +1,19 @@
+{
+    "extends": [
+        "tslint:recommended",
+        "tslint-config-prettier"
+    ],
+    "rules": {
+        "no-empty-interface": false,
+        "ordered-imports": [
+            false
+        ],
+        "object-literal-sort-keys": [
+            false
+        ],
+        "variable-name": [
+            true,
+            "allow-leading-underscore"
+        ]
+    }
+}

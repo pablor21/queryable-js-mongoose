@@ -1,0 +1,17 @@
+# dependencies
+/node_modules
+
+# IDE
+/.vscode
+
+# misc
+npm-debug.log
+.DS_Store
+
+# tests
+/test
+/coverage
+/.nyc_output
+
+# dist
+dist

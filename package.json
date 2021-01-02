@@ -1,0 +1,54 @@
+{
+  "name": "@pablor21/queryable-js-mongoose",
+  "version": "0.0.2",
+  "description": "Queryable implementation for mongoose",
+  "main": "index.js",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/pablor21/queryable-js-mongoose.git"
+  },
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "build-and-check": "npm run lint && npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push --follow-tags"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist/**/*"
+  ],
+  "keywords": [
+    "queryable",
+    "datasources",
+    "nodejs"
+  ],
+  "author": "pablor21@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@pablor21/queryable-js": "^0.0.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.11",
+    "jest": "^26.6.3",
+    "mongoose": "^5.11.9",
+    "prettier": "^1.19.1",
+    "ts-jest": "^26.4.4",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "mongoose": "^5.11.9",
+    "@pablor21/queryable-js": "^0.0.2"
+  }
+}
